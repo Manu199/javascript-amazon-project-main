@@ -25,9 +25,9 @@ products.forEach((product) => {
                 $${(product.priceCents / 100).toFixed(2)}
             </div>
 
-            <div class="product-quantity-container js-quantity-selector">
-                <select class="cart-value js-quantity-selector-${product.id}" id="cart-value">
-                <option value="1">1</option>
+            <div class="product-quantity-container">
+                <select>
+                <option selected value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
