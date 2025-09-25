@@ -59,7 +59,7 @@ products.forEach((product) => {
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
 let timeoutId;
 
-function updateCartQuantity(productId) {
+export function updateCartQuantity(productId) {
 let cartQuantity = 0;
             
     cart.forEach((cartItem) => {
