@@ -124,6 +124,8 @@ export function renderOrderSummary() {
                 const container = document.querySelector(`.js-cart-item-container-${productId}`);
                 container.remove();
                 cartQuantityHeader();
+                renderPaymentSummary();
+                
             })
         });
 
@@ -137,7 +139,6 @@ export function renderOrderSummary() {
             const productId = link.dataset.productId;
             const container = document.querySelector(`.js-cart-item-container-${productId}`);
             container.classList.add('is-editing-quantity');
-
         })
     })
         
@@ -158,6 +159,7 @@ export function renderOrderSummary() {
                 updateQuantity(productId, newQuantity);
                 container.querySelector('.quantity-label').innerHTML = newQuantity;
                 cartQuantityHeader();
+                renderPaymentSummary();
             }else {
                 alert('Add a valid quantity.');
             }
